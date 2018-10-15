@@ -1,0 +1,81 @@
+---
+title: Welcome to Middleman
+layout: "layout"
+
+---
+
+<% @title= 'Middleman Starter Kit' %>
+<% @page_classes= 'home' %>
+
+
+<section class="hero is-info is-medium is-bold">
+    <div class="hero-body">
+        <div class="container has-text-centered">
+            <%= image_tag 'middleman-logo.svg', alt: 'middleman', class: 'showoff' %>
+            <h1 class="title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>sed eiusmod tempor incididunt ut labore et dolore magna aliqua</h1>
+        </div>
+    </div>
+</section>
+
+
+<div class="container">
+  <!-- START FEED -->
+  <section class="articles">
+    <div class="column is-8 is-offset-2">
+
+      <!-- START Blog Post -->
+      <div class="card article is-top-10">
+          <div class="card-content">
+              <div class="media">
+                  <div class="media-content has-text-centered">
+                      <p class="title article-title">Introducing a new feature for paid subscribers</p>
+                      <div class="tags has-addons level-item">
+                          <span class="tag is-rounded is-info">@skeetskeet</span>
+                          <span class="tag is-rounded">May 10, 2018</span>
+                      </div>
+                  </div>
+              </div>
+              <div class="content article-body">
+                  <p>Non arcu risus quis varius quam quisque. Dictum varius duis at consectetur lorem. Posuere sollicitudin aliquam ultrices sagittis orci a scelerisque purus semper. </p>
+                  <p>Metus aliquam eleifend mi in nulla posuere sollicitudin aliquam ultrices. In hac habitasse platea dictumst vestibulum rhoncus est pellentesque elit. Accumsan lacus vel facilisis volutpat. Non sodales neque sodales ut etiam.
+                      Est pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus.</p>
+                  <h3 class="has-text-centered">How to properly center tags in bulma?</h3>
+                  <p> Proper centering of tags in bulma is done with class: <pre>level-item</pre>
+                      Voluptat ut farmacium tellus in metus vulputate. Feugiat in fermentum posuere urna nec. Pharetra convallis posuere morbi leo urna molestie.
+                      Accumsan lacus vel facilisis volutpat est velit egestas. Fermentum leo vel orci porta. Faucibus interdum posuere lorem ipsum.</p>
+              </div>
+          </div>
+      </div>
+      <!-- END Blog Post -->
+
+      <!-- START Markdown -->
+      <div class="card article is-top-10">
+        <div class="card-content">
+          <div class="content article-body">
+            <%= partial "pagemd/index"  %>
+          </div>
+        </div>
+      </div>
+      <!-- END Markdown -->
+
+      <!-- START Sitemap -->
+      <div class="card article is-top-10">
+        <div class="card-content">
+          <div class="content article-body">
+            <h3>Sitemap</h3>
+            <ul class="list-group">
+                <% sitemap.resources.each do |page| %>
+                    <% if page.url =~ /\.html/ %>
+                        <li class="list-group-item">
+                            <%= link_to page.url, page.url %>
+                        </li>
+                    <% end %>
+                <% end %>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- END Sitemap -->
+    </div>
+  </section>
+</div>

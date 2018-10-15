@@ -1,0 +1,30 @@
+---
+title: "My Title"
+list:
+  - Middleman v4
+  - HAML
+  - ERb
+  - Sass
+  - jQuery
+  - Bootstrap
+  - Font Awesome (CDN)
+  - Editor Config
+  - Simple sitemap helper
+  - humans.txt
+  - Open graph meta tags
+  - Middleman Deploy
+  - ERb simple page (/about)
+---
+
+<div class="container">
+  <section class="articles">
+    <div class="column is-8 is-offset-2">
+        <h1 class="title is-1">Sample List</h1>
+        <ol>
+          <% current_page.data.list.each do |f| %>
+          <li><%= f %></li>
+          <% end %>
+        </ol>
+    </div>
+  </section>
+</div>

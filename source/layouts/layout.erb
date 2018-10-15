@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <title><%= current_page.data.title || "middleman-kss" %></title>
+
+        <%= stylesheet_link_tag "application" %>
+        <%= favicon_tag 'favicon.ico' %>
+
+        <!-- favicon -->
+        <%= tag :link, :href => "/humans.txt", :rel => "author", :type => "text/plain" %>
+        <%= tag :link, :rel => "manifest", :href => "site.webmanifest" %>
+        <%= tag :link, :rel => "icon", :href => "favicon.ico" %>
+        <%= tag :link, :rel => "apple-touch-icon", :href => "icon.png" %>
+
+        <!-- open graph -->
+        <%= tag :meta, :content => 'https://www.huement.com', :property => 'og:url' %>
+        <%= tag :meta, :content => 'website', :property => 'og:type' %>
+        <%= tag :meta, :content => 'Huements Awesome Title', :property => 'og:title' %>
+        <%= tag :meta, :content => 'Huements Description', :property => 'og:description' %>
+        <%= tag :meta, :content => 'yourbanner.png', :property => 'og:image' %>
+
+        <!-- twitter -->
+        <%= tag :meta, :content => 'summary', :name => 'twitter:card' %>
+        <%= tag :meta, :content => '@huement', :name => 'twitter:site' %>
+        <%= tag :meta, :content => 'Huements Awesome Title', :name => 'twitter:title' %>
+        <%= tag :meta, :content => 'Huement Description', :name => 'twitter:description' %>
+        <%= tag :meta, :content => '@huement', :name => 'twitter:creator' %>
+
+    </head>
+    <body class="<%= page_classes %>">
+        <!--[if lt IE 9]> <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p> <![endif]-->
+        <%= partial "partials/header" %>
+        <%= yield %>
+        <%= partial "partials/footer" %>
+        <%= javascript_include_tag "application" %>
+    </body>
+</html>

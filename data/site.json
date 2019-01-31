@@ -1,0 +1,12 @@
+{
+  "baseURL"   : "/build",
+  "primary"   : "#1F55B5",
+  "secondary" : "#7fd2d6",
+  "contact"   : "example@email.com",
+  "javascript":
+    {
+      "jquery"    : { "remote": "https://code.jquery.com/jquery-3.3.1.min.js", "local": "assets/javascripts/vendor/jquery-3.3.1.min.js"},
+      "ui"        : [ "https://unpkg.com/aos@next/dist/aos.js" ],
+      "analytics" : { "library": "https://www.google-analytics.com/analytics.js", "id": "UA-XXXXX-Y" }
+    }
+}

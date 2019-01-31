@@ -1,26 +1,29 @@
-# If you do not have OpenSSL installed, change
-# the following line to use 'http://'
+## Ruby Remote Repo URL
+## --------------------
+## If you do not have OpenSSL installed, change
+## the following line to use 'http://'
 source 'https://rubygems.org'
 
-# Middleman Gems
-###############################
+## Middleman Core
+## --------------------
 gem 'middleman', '~> 4.3.0.rc.2'
-gem 'middleman-sprockets'
-gem 'middleman-autoprefixer', '~> 2.9'
-gem 'middleman-livereload', '~> 3.4', '>= 3.4.6'
-gem 'middleman-syntax', '~> 3.0.0'
+gem 'middleman-syntax'
 gem 'middleman-title'
 gem 'middleman-build-reporter'
+
+## Middleman Extensions
+## --------------------
+gem 'middleman-sprockets'
+gem 'sprockets-es6', '~> 0.9.2'
+gem 'middleman-autoprefixer'
+gem "middleman-livereload", "~> 3.4"
 gem 'middleman-webpacker'
 gem 'middleman-minify-html'
 gem 'middleman-svg'
+gem 'middleman-s3_sync'
 
-#Extensions
-###############################
-gem 'sprockets-es6', '~> 0.9.2'
-
-# Frameworks/Library
-###############################
+## Frameworks/Library
+## --------------------
 # Bootstrap
 # gem 'bootstrap', '~> 4.1', '>= 4.1.3'
 # # Popper
